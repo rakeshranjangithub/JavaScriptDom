@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+
+    </style>
+</head>
+<body>
+   <div>
+       <input id="input" type="text" placeholder="Enter Task">
+       <input id="button" type='submit' value="Add">
+   </div> 
+   <div>
+      <ol id="output"></ol>
+   </div>
+
+   <script>
+        let input = document.getElementById('input');
+        let button = document.getElementById('button');
+        let output = document.getElementById('output');
+        let list= "";
+        button.addEventListener('click' , () => {
+            list += `<li>${input.value}</li>`;
+            output.innerHTML = list;
+            console.log('hi');
+            input.value = '';
+        })
+   </script>
+
+
+</body>
+</html>
